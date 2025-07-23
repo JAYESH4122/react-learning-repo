@@ -1,12 +1,17 @@
 import { useReducer } from "react";
 
 function reducer(state, action) {
-  if (action.type === "inremented_age") {
-    return {
-      age: state.age + 1,
-    };
+  switch (action.type) {
+    case "increment_age": {
+      return { age: state.age + 5 };
+    }
+    case "reset_age": {
+      return { age: (state.age = 0) };
+    }
+    case "decrement_age": {
+      return { age: state.age - 3 };
+    }
   }
-  throw Error("Unknown action.");
 }
 
 export default function Counter() {
@@ -16,13 +21,26 @@ export default function Counter() {
     <>
       <button
         onClick={() => {
-          dispatch({ type: "incremented_age" });
+          dispatch({ type: "increment_age" });
         }}
       >
         Increment age
       </button>
-      <p>Hello! You are {state.age}</p>wqqwerqwewe
+      <button
+        onClick={() => {
+          dispatch({ type: "reset_age" });
+        }}
+      >
+        reset age
+      </button>
+      <button
+        onClick={() => {
+          dispatch({ type: "decrement_age" });
+        }}
+      >
+        decrement age
+      </button>
+      <p>Hello! You are {state.age}</p>
     </>
   );
 }
-
