@@ -1,11 +1,7 @@
-import ReduceFunction from "./components/ReduceFunction";
-import RenderAnArrayOfObjects from "./components/RenderAnArrayOfObjects";
-import ReactListRendering from "./components/RenderAnArrayOfStrings";
-import RenderANestedArray from "./components/RenderANestedArray";
-import Counter from "./components/UseReducerTester";
-
+import ReplacingItemsInAnArray from "./components/ReplacingItemsInAnArray";
+import UpdatingObjState from "./components/UpdatingObjState";
 function App() {
-  return <ReduceFunction />;
+  return <ReplacingItemsInAnArray />;
 }
 
 export default App;
