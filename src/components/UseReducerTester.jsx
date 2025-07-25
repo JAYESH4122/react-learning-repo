@@ -14,15 +14,15 @@ function reducer(state, action) {
   }
 }
 
-export default function Counter() {
+export default function Counter() { 
   const [state, dispatch] = useReducer(reducer, { age: 42 });
 
   return (
-    <>
+    <>  
       <button
         onClick={() => {
           dispatch({ type: "increment_age" });
-        }}
+        }}  
       >
         Increment age
       </button>
@@ -31,7 +31,6 @@ export default function Counter() {
           dispatch({ type: "reset_age" });
         }}
       >
-        reset age
       </button>
       <button
         onClick={() => {
