@@ -1,7 +1,7 @@
-import ReplacingItemsInAnArray from "./components/ReplacingItemsInAnArray";
-import UpdatingObjState from "./components/UpdatingObjState";
+import { FormattedAmountInputField } from "./components/FormattedAmountInputField";
+
 function App() {
-  return <ReplacingItemsInAnArray />;
+  return <FormattedAmountInputField />;
 }
 
 export default App;
